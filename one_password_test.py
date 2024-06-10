@@ -17,16 +17,13 @@ async def main(passw=None):
         integration_version="v1.0.0",
     )
 
-
     item = await client.items.get(vault_id, item_id)
     print("Original item:", dict(item))
     if not passw:
-        passw = password_gen(20, True, True, True, True)
+        passw = password_gen(20, True, False, True, True)
     item.fields[0].value = passw
-    # Update the item in the vault (requires elevated permissions)
-    # updated_item = await client.items.update(item)
-    # print("Updated item in vault:", dict(updated_item))
-    # TODO
+    updated_item = await client.items.update(item)
+    print("Updated item in vault:", dict(updated_item))
 
 
 if __name__ == "__main__":
