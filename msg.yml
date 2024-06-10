@@ -1,0 +1,8 @@
+---
+- name: Input Variable Playbook
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Print a message
+      debug:
+        msg: "{{ message }}"
