@@ -1,4 +1,4 @@
-# Documentation For OnePass integration
+# 1PASSINT
 
 ## Vault Information:
 you need 1Password CLI, and a service account token
