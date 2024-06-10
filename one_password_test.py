@@ -5,6 +5,7 @@ from onepassword import Client
 from dotenv import load_dotenv
 from utilities import password_gen, encrypt, ansi_run
 from semail import send_email
+from slk import message
 
 
 # check readme.md
@@ -48,9 +49,12 @@ if __name__ == "__main__":
     for event in r.events:
         ar.append(event)
     with open('log.json', 'w') as f:
-        json.dump(ar, f, indent=4)
+        # TODO
+        # I added just the play recap FOR NOW
+        json.dump(ar[int(len(ar))-1], f, indent=4)
     
     subject = f"{ playbook } : { r.status }"
-    receiver_email = "domminic.mayer@redwoodmaterials.com"
+    receiver_email = "test@gmail.com"
     # send_email(subject, receiver_email, "See log attached!", "log.json")
     print(r.status)
+    message(r.status)

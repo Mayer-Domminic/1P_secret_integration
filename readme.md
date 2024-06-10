@@ -25,3 +25,9 @@ uses .ENV for storage
 runs an ansible playbook automatically 
 saves results to log.json
 based on the results send email with log
+
+## slk.py
+slack integration for automated message and log sending
+
+## test.yml
+script in ansible TO run
