@@ -47,14 +47,10 @@ if __name__ == "__main__":
 
     for event in r.events:
         ar.append(event)
-    if not r.status == "successful":
-        print(r.status)
-        # TODO
     with open('log.json', 'w') as f:
         json.dump(ar, f, indent=4)
-        # TODO
     
-    print(r.status)
     subject = f"{ playbook } : { r.status }"
     receiver_email = "domminic.mayer@redwoodmaterials.com"
-    send_email(subject, receiver_email, "See log attached!", "log.json")
+    # send_email(subject, receiver_email, "See log attached!", "log.json")
+    print(r.status)
