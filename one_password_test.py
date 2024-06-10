@@ -4,6 +4,7 @@ import json
 from onepassword import Client
 from dotenv import load_dotenv
 from utilities import password_gen, encrypt, ansi_run
+from semail import send_email
 
 
 # check readme.md
@@ -42,17 +43,18 @@ async def main(passw=None):
 if __name__ == "__main__":
     ar = []
     p, u, pw = asyncio.run(main())
-
     r = ansi_run(playbook, inventory, u, pw, p)
 
     for event in r.events:
         ar.append(event)
-
     if not r.status == "successful":
         print(r.status)
         # TODO
-    
     with open('log.json', 'w') as f:
         json.dump(ar, f, indent=4)
         # TODO
+    
     print(r.status)
+    subject = f"{ playbook } : { r.status }"
+    receiver_email = "domminic.mayer@redwoodmaterials.com"
+    send_email(subject, receiver_email, "See log attached!", "log.json")
