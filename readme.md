@@ -10,6 +10,7 @@ op item | op document | op item | op document
 
 ### item_id
 op item list
+[alt] op item get <"name">
 
 ### vault_id
 op vault list
