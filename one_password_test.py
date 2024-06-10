@@ -5,19 +5,22 @@ from onepassword import Client
 from dotenv import load_dotenv
 from utilities import password_gen, encrypt, ansi_run
 
+
 # check readme.md
 load_dotenv()
 vault_id = os.getenv("VAULT_ID")
 item_id = os.getenv("ITEM_ID")
 user_id = os.getenv("USERNAME")
 token = os.getenv("OP_ACCOUNT_TOKEN")
+playbook = os.getenv("PLAYBOOK")
+inventory = os.getenv("INVENTORY")
 
-
-if not vault_id or not item_id or not token:
-    print('ENV issue!')
-    raise Exception("Please double check ENV variables!")
 
 async def main(passw=None):
+    if not vault_id or not item_id or not token or not playbook or not inventory:
+        print('ENV issue!')
+        raise Exception("Please double check ENV variables!")
+    
     client = await Client.authenticate(
         auth=token,
         integration_name="My 1Password Integration",
@@ -40,7 +43,7 @@ if __name__ == "__main__":
     ar = []
     p, u, pw = asyncio.run(main())
 
-    r = ansi_run("test.yml", "inventory.ini", u, pw, p)
+    r = ansi_run(playbook, inventory, u, pw, p)
 
     for event in r.events:
         ar.append(event)
@@ -52,3 +55,4 @@ if __name__ == "__main__":
     with open('log.json', 'w') as f:
         json.dump(ar, f, indent=4)
         # TODO
+    print(r.status)
