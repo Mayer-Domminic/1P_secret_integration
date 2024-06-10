@@ -2,11 +2,9 @@
 
 ## Vault Information:
 you need 1Password CLI, and a service account token
-run export OP_SERVICE_ACCOUNT_TOKEN=<token>
-op user get --me, confirms it
-op item | op document | op item | op document 
-
-// Commands must be ran with CLI installed
+The CLI only needs to be installed on one computer to find the IDs of the vault/item.
+export OP_SERVICE_ACCOUNT_TOKEN=<token>
+op user get --me
 
 ### item_id
 op item list

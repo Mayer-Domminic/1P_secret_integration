@@ -1,5 +1,30 @@
 import string
 import secrets
+import crypt
+import os
+import ansible_runner
+
+def run_playbook(playbook_path, inventory_path, extra_vars):
+    r = ansible_runner.run(
+        playbook=playbook_path,
+        inventory=inventory_path,
+        extravars=extra_vars
+    )
+    return r
+
+def ansi_run(playbook, inventory, username, upw, pw):
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    playbook_path = os.path.join(current_dir, playbook)
+    inventory_path = os.path.join(current_dir, inventory)
+    extra_vars = {"user": username, "pass": upw, "encrypted_password": pw}
+
+    result = run_playbook(playbook_path, inventory_path, extra_vars)
+
+    return result
+
+def encrypt(password):
+    salt = crypt.mksalt(crypt.METHOD_SHA512)
+    return crypt.crypt(password, salt)
 
 def generate(length, use_digits, use_symbols, use_uppercase, use_lowercase):
     characters = ""
@@ -14,8 +39,6 @@ def generate(length, use_digits, use_symbols, use_uppercase, use_lowercase):
 
     if len(characters) == 0:
         raise ValueError("At least one character type must be selected")
-
-    # Generate a password by selecting randomly from the combined character set
     password = ''.join(secrets.choice(characters) for _ in range(length))
 
     return password

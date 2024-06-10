@@ -1,0 +1,15 @@
+- name: "Test Encrypted Password Transmission"
+  hosts: localhost
+  vars:
+    ansible_user: "{{ user }}"
+    ansible_password: "{{ pass }}"
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: "Check if encrypted password is received"
+      command: echo "{{ encrypted_password }}"
+      register: response
+
+    - name: "Print the encrypted password"
+      debug:
+        var: response

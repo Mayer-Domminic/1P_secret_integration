@@ -1,8 +1,19 @@
----
-- name: Input Variable Playbook
+- name: "Configure Device"
   hosts: localhost
-  gather_facts: no
+  vars:
+    ansible_user: "{{ user }}"
+    ansible_password: "{{ pass }}"
+  connection: local
+  gather_facts: yes
   tasks:
-    - name: Print a message
+    - name: "Change root password"
+      juniper.device.config:
+        config_mode: "private"
+        load: "set"
+        lines:
+          - "set system root-authentication encrypted-password {{ encrypted_password }}"
+      register: response
+
+    - name: "Print the config changes"
       debug:
-        msg: "{{ message }}"
+        var: response.changed
