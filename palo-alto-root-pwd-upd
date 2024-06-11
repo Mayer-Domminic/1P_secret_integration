@@ -1,0 +1,26 @@
+- name: "Configure Device"
+  hosts: localhost
+  vars:
+    ansible_user: "{{ user }}"
+    ansible_password: "{{ pass }}"
+    ansible_host: "{{ host }}"
+    new_password: "{{ encrypted_password }}"
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: "Change root password"
+      paloaltonetworks.panos.panos_op:
+        provider:
+          ip_address: "{{ ansible_host }}"
+          username: "{{ ansible_user }}"
+          password: "{{ ansible_password }}"
+        cmd: |
+          configure
+          set mgt-config users root phash "{{ new_password }}"
+          commit
+      register: response
+
+    - name: "Print the config changes"
+      debug:
+        var: response
+ 

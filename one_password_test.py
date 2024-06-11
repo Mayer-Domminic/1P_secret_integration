@@ -25,8 +25,8 @@ async def main(passw=None):
     
     client = await Client.authenticate(
         auth=token,
-        integration_name="My 1Password Integration",
-        integration_version="v1.0.0",
+        integration_name="1passint",
+        integration_version="v1",
     )
 
     item = await client.items.get(vault_id, item_id)
