@@ -1,4 +1,5 @@
 # 1PASSINT
+Almost have this working for palo alto servers, but I do need to test!
 jun-pas-upd.py is the file to run
 the main file can take an argument (new password), or auto update them
 

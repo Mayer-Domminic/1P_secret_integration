@@ -4,6 +4,12 @@ Last Modified: 6/13/24
 Author: Domminic Mayer
 
 Function: Retrieve onepass information and send that information to ansible files for updating juniper root passwords.
+
+TODO: 
+encorporate palo alto network systems for pswd rotations
+alerting when something does go wrong -> slack?
+successful running -> logging
+
 '''
 
 import os
