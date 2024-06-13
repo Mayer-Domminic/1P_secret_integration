@@ -1,3 +1,11 @@
+'''
+Created: 6/24
+Last Modified: 6/13/24
+Author: Domminic Mayer
+
+Function: Retrieve onepass information and send that information to ansible files for updating juniper root passwords.
+'''
+
 import os
 import asyncio
 import string
@@ -5,9 +13,8 @@ import secrets
 import crypt
 import ansible_runner
 import json
-
-from dotenv import load_dotenv
 from onepassword import Client
+from dotenv import load_dotenv
 
 load_dotenv()
 vault_id = os.getenv("VAULT_ID")
@@ -19,8 +26,8 @@ inventory = os.getenv("INVENTORY")
 def run_playbook(extra_vars):
     current_dir = os.path.dirname(os.path.abspath(__file__))
     r = ansible_runner.run(
-        os.path.join(current_dir, playbook), #playbook path
-        os.path.join(current_dir, inventory), #inventory path
+        playbook=os.path.join(current_dir, playbook), #playbook path
+        inventory=os.path.join(current_dir, inventory), #inventory path
         extravars=extra_vars
     )
     return r
@@ -77,8 +84,19 @@ async def juni_update_pass(passw=None):
 
     # encrypt & run through ansible
     encrypted = encrypt(passw)
-    r = run_playbook({"encrypted_password": encrypted})
+    ansible_user = "# TODO"
+    ansible_pass = "# TODO"
+    r = run_playbook({"encrypted_password": encrypted, "user": ansible_user, "pass":ansible_pass})
+
+    ar = []
+    for event in r.events:
+        ar.append(event)
+    with open('log.json', 'w') as f:
+        json.dump(ar, f, indent=4)
+    # makes a nicer looking response
 
     if not (r.status == "successful"):
         print("Ansible script failed!")
-        print(json.dump(r, indent=2))
+
+if __name__ == "__main__":
+    asyncio.run(juni_update_pass())
