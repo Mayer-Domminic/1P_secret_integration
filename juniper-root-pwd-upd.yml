@@ -1,5 +1,5 @@
 - name: "Configure Device"
-  hosts: localhost
+  hosts: test
   vars:
     ansible_user: "{{ user }}"
     ansible_password: "{{ pass }}"

@@ -1,7 +1,6 @@
 # 1PASSINT
 Almost have this working for palo alto servers, but I do need to test!
-jun-pas-upd.py is the file to run
-the main file can take an argument (new password), or auto update them
+jun-pas-upd.py can take an argument (new password), or auto update them
 
 pip install -r requirements.txt
 pip install git+ssh://git@github.com/1Password/onepassword-sdk-python.git@v0.1.0-beta.9

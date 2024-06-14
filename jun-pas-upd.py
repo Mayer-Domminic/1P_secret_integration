@@ -23,11 +23,13 @@ from onepassword import Client
 from dotenv import load_dotenv
 
 load_dotenv()
-vault_id = os.getenv("VAULT_ID")
-item_id = os.getenv("ITEM_ID")
+vault_id = os.getenv("VAULT")
+juniper = os.getenv("JUNIPER")
+ansible = os.getenv("ANSIBLE")
 token = os.getenv("OP_ACCOUNT_TOKEN")
-playbook = os.getenv("PLAYBOOK")
-inventory = os.getenv("INVENTORY")
+
+playbook = "juniper-root-pwd-upd.yml"
+inventory = "test.yml"
 
 def run_playbook(extra_vars):
     current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -71,28 +73,28 @@ def generate(length, use_digits, use_symbols, use_uppercase, use_lowercase):
 
 async def juni_update_pass(passw=None):
     # pre-env check
-    if not (vault_id and item_id and token and playbook and inventory):
+    if not (vault_id and juniper and token and ansible):
         raise Exception("Please double check ENV variables!")
     
-    # get onepassword client and fetch the selected object
+    # get onepassword client and fetch the objects
     client = await Client.authenticate(
         auth=token,
         integration_name="1passint",
         integration_version="v1",
     )
-    item = await client.items.get(vault_id, item_id)
+    item = await client.items.get(vault_id, juniper)
+    ansible_item = await client.items.get(vault_id, ansible)
 
     # if you don't pass in a new one, generate one, upd 1pass
     if not passw:
-        passw = password_gen(20, True, False, True, True)
+        passw = password_gen(20, True, True, True, True)
     item.fields[0].value = passw
     await client.items.update(item)
 
-    # encrypt & run through ansible
     encrypted = encrypt(passw)
-    ansible_user = "# TODO"
-    ansible_pass = "# TODO"
-    r = run_playbook({"encrypted_password": encrypted, "user": ansible_user, "pass":ansible_pass})
+    ansible_user = ansible_item.fields[0].value
+    ansible_pass = ansible_item.fields[1].value
+    r = run_playbook({"encrypted_password": encrypted, "user": ansible_user, "pass": ansible_pass})
 
     ar = []
     for event in r.events:

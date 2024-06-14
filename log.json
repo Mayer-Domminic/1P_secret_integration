@@ -1,376 +1,102 @@
 [
     {
         "event": "verbose",
-        "uuid": "d5f7329d-278c-406a-8134-2fea194934df",
+        "uuid": "2da5b921-7767-4a1e-b579-b2c19c144fdb",
         "counter": 1,
-        "stdout": "\u001b[1;35m[WARNING]: Found both group and host with same name: localhost\u001b[0m",
+        "stdout": "\u001b[0;31mERROR! couldn't resolve module/action 'juniper.device.config'. This often indicates a misspelling, missing collection, or incorrect module path.\u001b[0m",
         "start_line": 0,
         "end_line": 1,
-        "runner_ident": "4cef8bdc-6e7a-4721-96e3-1f1e2a0b187f",
-        "created": "2024-06-13T15:36:37.556028+00:00"
-    },
-    {
-        "uuid": "63bc078d-ac0a-491c-a96e-5382035b0e37",
-        "counter": 2,
-        "stdout": "",
-        "start_line": 1,
-        "end_line": 1,
-        "runner_ident": "4cef8bdc-6e7a-4721-96e3-1f1e2a0b187f",
-        "event": "playbook_on_start",
-        "pid": 422108,
-        "created": "2024-06-13T15:36:37.629857+00:00",
-        "event_data": {
-            "playbook": "/home/dom/testing/new/test.yml",
-            "playbook_uuid": "63bc078d-ac0a-491c-a96e-5382035b0e37",
-            "uuid": "63bc078d-ac0a-491c-a96e-5382035b0e37"
-        }
-    },
-    {
-        "uuid": "152d60d9-8967-a0ee-903b-000000000002",
-        "counter": 3,
-        "stdout": "\r\nPLAY [Test Encrypted Password Transmission] ************************************",
-        "start_line": 1,
-        "end_line": 3,
-        "runner_ident": "4cef8bdc-6e7a-4721-96e3-1f1e2a0b187f",
-        "event": "playbook_on_play_start",
-        "pid": 422108,
-        "created": "2024-06-13T15:36:37.630753+00:00",
-        "parent_uuid": "63bc078d-ac0a-491c-a96e-5382035b0e37",
-        "event_data": {
-            "playbook": "/home/dom/testing/new/test.yml",
-            "playbook_uuid": "63bc078d-ac0a-491c-a96e-5382035b0e37",
-            "play": "Test Encrypted Password Transmission",
-            "play_uuid": "152d60d9-8967-a0ee-903b-000000000002",
-            "play_pattern": "localhost",
-            "name": "Test Encrypted Password Transmission",
-            "pattern": "localhost",
-            "uuid": "152d60d9-8967-a0ee-903b-000000000002"
-        }
-    },
-    {
-        "uuid": "152d60d9-8967-a0ee-903b-000000000004",
-        "counter": 4,
-        "stdout": "\r\nTASK [Check if encrypted password is received] *********************************",
-        "start_line": 3,
-        "end_line": 5,
-        "runner_ident": "4cef8bdc-6e7a-4721-96e3-1f1e2a0b187f",
-        "event": "playbook_on_task_start",
-        "pid": 422108,
-        "created": "2024-06-13T15:36:37.635527+00:00",
-        "parent_uuid": "152d60d9-8967-a0ee-903b-000000000002",
-        "event_data": {
-            "playbook": "/home/dom/testing/new/test.yml",
-            "playbook_uuid": "63bc078d-ac0a-491c-a96e-5382035b0e37",
-            "play": "Test Encrypted Password Transmission",
-            "play_uuid": "152d60d9-8967-a0ee-903b-000000000002",
-            "play_pattern": "localhost",
-            "task": "Check if encrypted password is received",
-            "task_uuid": "152d60d9-8967-a0ee-903b-000000000004",
-            "task_action": "command",
-            "resolved_action": "ansible.builtin.command",
-            "task_args": "",
-            "task_path": "/home/dom/testing/new/test.yml:9",
-            "name": "Check if encrypted password is received",
-            "is_conditional": false,
-            "uuid": "152d60d9-8967-a0ee-903b-000000000004"
-        }
-    },
-    {
-        "uuid": "a0905c51-72b9-4d2c-bc68-c3ec970bebe4",
-        "counter": 5,
-        "stdout": "",
-        "start_line": 5,
-        "end_line": 5,
-        "runner_ident": "4cef8bdc-6e7a-4721-96e3-1f1e2a0b187f",
-        "event": "runner_on_start",
-        "pid": 422108,
-        "created": "2024-06-13T15:36:37.636195+00:00",
-        "parent_uuid": "152d60d9-8967-a0ee-903b-000000000004",
-        "event_data": {
-            "playbook": "/home/dom/testing/new/test.yml",
-            "playbook_uuid": "63bc078d-ac0a-491c-a96e-5382035b0e37",
-            "play": "Test Encrypted Password Transmission",
-            "play_uuid": "152d60d9-8967-a0ee-903b-000000000002",
-            "play_pattern": "localhost",
-            "task": "Check if encrypted password is received",
-            "task_uuid": "152d60d9-8967-a0ee-903b-000000000004",
-            "task_action": "command",
-            "resolved_action": "ansible.builtin.command",
-            "task_args": "",
-            "task_path": "/home/dom/testing/new/test.yml:9",
-            "host": "localhost",
-            "uuid": "a0905c51-72b9-4d2c-bc68-c3ec970bebe4"
-        }
+        "runner_ident": "8e7d16ce-c9d8-4e73-bec4-d60a8f4ea396",
+        "created": "2024-06-14T16:37:01.544568+00:00"
     },
     {
         "event": "verbose",
-        "uuid": "0dccc958-0977-4a66-90dd-dc6c6df05347",
+        "uuid": "0f9bcfee-ba41-468b-bba1-8646e16b9402",
+        "counter": 2,
+        "stdout": "\u001b[0;31m\u001b[0m",
+        "start_line": 1,
+        "end_line": 2,
+        "runner_ident": "8e7d16ce-c9d8-4e73-bec4-d60a8f4ea396",
+        "created": "2024-06-14T16:37:01.544938+00:00"
+    },
+    {
+        "event": "verbose",
+        "uuid": "6341b450-68f1-4acd-afdb-937bdbd81015",
+        "counter": 3,
+        "stdout": "\u001b[0;31mThe error appears to be in '/home/dom/testing/new/juniper-root-pwd-upd.yml': line 9, column 7, but may\u001b[0m",
+        "start_line": 2,
+        "end_line": 3,
+        "runner_ident": "8e7d16ce-c9d8-4e73-bec4-d60a8f4ea396",
+        "created": "2024-06-14T16:37:01.545346+00:00"
+    },
+    {
+        "event": "verbose",
+        "uuid": "61e77294-a443-4fd8-89b2-8812bd32e89c",
+        "counter": 4,
+        "stdout": "\u001b[0;31mbe elsewhere in the file depending on the exact syntax problem.\u001b[0m",
+        "start_line": 3,
+        "end_line": 4,
+        "runner_ident": "8e7d16ce-c9d8-4e73-bec4-d60a8f4ea396",
+        "created": "2024-06-14T16:37:01.545583+00:00"
+    },
+    {
+        "event": "verbose",
+        "uuid": "8ccad030-3a32-4e2b-9ee0-065f9d951008",
+        "counter": 5,
+        "stdout": "\u001b[0;31m\u001b[0m",
+        "start_line": 4,
+        "end_line": 5,
+        "runner_ident": "8e7d16ce-c9d8-4e73-bec4-d60a8f4ea396",
+        "created": "2024-06-14T16:37:01.545820+00:00"
+    },
+    {
+        "event": "verbose",
+        "uuid": "c4a6d3e9-6702-4a96-8173-a149a35dcf0b",
         "counter": 6,
-        "stdout": "\u001b[1;35m[WARNING]: Platform linux on host localhost is using the discovered Python\u001b[0m",
+        "stdout": "\u001b[0;31mThe offending line appears to be:\u001b[0m",
         "start_line": 5,
         "end_line": 6,
-        "runner_ident": "4cef8bdc-6e7a-4721-96e3-1f1e2a0b187f",
-        "created": "2024-06-13T15:36:37.888934+00:00"
+        "runner_ident": "8e7d16ce-c9d8-4e73-bec4-d60a8f4ea396",
+        "created": "2024-06-14T16:37:01.546057+00:00"
     },
     {
         "event": "verbose",
-        "uuid": "1b9fe2d2-5030-4678-b5ff-f7c2037bf9bb",
+        "uuid": "84132403-0656-45e3-9e89-38fbd1cade10",
         "counter": 7,
-        "stdout": "\u001b[1;35minterpreter at /home/dom/testing/new/venv/bin/python3.10, but future\u001b[0m",
+        "stdout": "\u001b[0;31m\u001b[0m",
         "start_line": 6,
         "end_line": 7,
-        "runner_ident": "4cef8bdc-6e7a-4721-96e3-1f1e2a0b187f",
-        "created": "2024-06-13T15:36:37.888934+00:00"
+        "runner_ident": "8e7d16ce-c9d8-4e73-bec4-d60a8f4ea396",
+        "created": "2024-06-14T16:37:01.546235+00:00"
     },
     {
         "event": "verbose",
-        "uuid": "754463f8-990a-43de-8b15-8b1f000bd55a",
+        "uuid": "4a089192-18b3-4f19-a2e8-531096144b31",
         "counter": 8,
-        "stdout": "\u001b[1;35minstallation of another Python interpreter could change the meaning of that\u001b[0m",
+        "stdout": "\u001b[0;31m  tasks:\u001b[0m",
         "start_line": 7,
         "end_line": 8,
-        "runner_ident": "4cef8bdc-6e7a-4721-96e3-1f1e2a0b187f",
-        "created": "2024-06-13T15:36:37.888934+00:00"
+        "runner_ident": "8e7d16ce-c9d8-4e73-bec4-d60a8f4ea396",
+        "created": "2024-06-14T16:37:01.546342+00:00"
     },
     {
         "event": "verbose",
-        "uuid": "fe5b7593-2523-4070-ba7b-32a63767d10b",
+        "uuid": "370b970a-7e86-4307-8783-4e0345a5f834",
         "counter": 9,
-        "stdout": "\u001b[1;35mpath. See https://docs.ansible.com/ansible-\u001b[0m",
+        "stdout": "\u001b[0;31m    - name: \"Change root password\"\u001b[0m",
         "start_line": 8,
         "end_line": 9,
-        "runner_ident": "4cef8bdc-6e7a-4721-96e3-1f1e2a0b187f",
-        "created": "2024-06-13T15:36:37.888934+00:00"
+        "runner_ident": "8e7d16ce-c9d8-4e73-bec4-d60a8f4ea396",
+        "created": "2024-06-14T16:37:01.546600+00:00"
     },
     {
         "event": "verbose",
-        "uuid": "87c36d99-adb8-455f-8ff5-d2fb8c14876a",
+        "uuid": "d1a2e3d8-dd0d-402c-8cf3-86979e1de95c",
         "counter": 10,
-        "stdout": "\u001b[1;35mcore/2.17/reference_appendices/interpreter_discovery.html for more information.\u001b[0m",
+        "stdout": "\u001b[0;31m      ^ here\u001b[0m",
         "start_line": 9,
         "end_line": 10,
-        "runner_ident": "4cef8bdc-6e7a-4721-96e3-1f1e2a0b187f",
-        "created": "2024-06-13T15:36:37.888934+00:00"
-    },
-    {
-        "uuid": "dfc33e7e-623a-4653-94e5-27d478f8e644",
-        "counter": 11,
-        "stdout": "\u001b[0;33mchanged: [localhost]\u001b[0m",
-        "start_line": 10,
-        "end_line": 11,
-        "runner_ident": "4cef8bdc-6e7a-4721-96e3-1f1e2a0b187f",
-        "event": "runner_on_ok",
-        "pid": 422108,
-        "created": "2024-06-13T15:36:37.888378+00:00",
-        "parent_uuid": "152d60d9-8967-a0ee-903b-000000000004",
-        "event_data": {
-            "playbook": "/home/dom/testing/new/test.yml",
-            "playbook_uuid": "63bc078d-ac0a-491c-a96e-5382035b0e37",
-            "play": "Test Encrypted Password Transmission",
-            "play_uuid": "152d60d9-8967-a0ee-903b-000000000002",
-            "play_pattern": "localhost",
-            "task": "Check if encrypted password is received",
-            "task_uuid": "152d60d9-8967-a0ee-903b-000000000004",
-            "task_action": "command",
-            "resolved_action": "ansible.builtin.command",
-            "task_args": "",
-            "task_path": "/home/dom/testing/new/test.yml:9",
-            "host": "localhost",
-            "remote_addr": "localhost",
-            "res": {
-                "changed": true,
-                "stdout": "$6$ieieHYQKmuo0g0Vg$2z3.gNkOX7eQz/zvsHk94XBj5i4eekHw1eamHafQ/t6o2j7ZkWco2espVxpFjsNwZDRJoaQYNBLJuwDKnrOdq0",
-                "stderr": "",
-                "rc": 0,
-                "cmd": [
-                    "echo",
-                    "$6$ieieHYQKmuo0g0Vg$2z3.gNkOX7eQz/zvsHk94XBj5i4eekHw1eamHafQ/t6o2j7ZkWco2espVxpFjsNwZDRJoaQYNBLJuwDKnrOdq0"
-                ],
-                "start": "2024-06-13 08:36:37.872874",
-                "end": "2024-06-13 08:36:37.875032",
-                "delta": "0:00:00.002158",
-                "msg": "",
-                "invocation": {
-                    "module_args": {
-                        "_raw_params": "echo \"$6$ieieHYQKmuo0g0Vg$2z3.gNkOX7eQz/zvsHk94XBj5i4eekHw1eamHafQ/t6o2j7ZkWco2espVxpFjsNwZDRJoaQYNBLJuwDKnrOdq0\"",
-                        "_uses_shell": false,
-                        "expand_argument_vars": true,
-                        "stdin_add_newline": true,
-                        "strip_empty_ends": true,
-                        "argv": null,
-                        "chdir": null,
-                        "executable": null,
-                        "creates": null,
-                        "removes": null,
-                        "stdin": null
-                    }
-                },
-                "stdout_lines": [
-                    "$6$ieieHYQKmuo0g0Vg$2z3.gNkOX7eQz/zvsHk94XBj5i4eekHw1eamHafQ/t6o2j7ZkWco2espVxpFjsNwZDRJoaQYNBLJuwDKnrOdq0"
-                ],
-                "stderr_lines": [],
-                "ansible_facts": {
-                    "discovered_interpreter_python": "/home/dom/testing/new/venv/bin/python3.10"
-                },
-                "warnings": [
-                    "Platform linux on host localhost is using the discovered Python interpreter at /home/dom/testing/new/venv/bin/python3.10, but future installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information."
-                ],
-                "_ansible_no_log": false
-            },
-            "start": "2024-06-13T15:36:37.636137+00:00",
-            "end": "2024-06-13T15:36:37.888265+00:00",
-            "duration": 0.252128,
-            "event_loop": null,
-            "uuid": "dfc33e7e-623a-4653-94e5-27d478f8e644"
-        }
-    },
-    {
-        "uuid": "152d60d9-8967-a0ee-903b-000000000005",
-        "counter": 12,
-        "stdout": "\r\nTASK [Print the encrypted password] ********************************************",
-        "start_line": 11,
-        "end_line": 13,
-        "runner_ident": "4cef8bdc-6e7a-4721-96e3-1f1e2a0b187f",
-        "event": "playbook_on_task_start",
-        "pid": 422108,
-        "created": "2024-06-13T15:36:37.889952+00:00",
-        "parent_uuid": "152d60d9-8967-a0ee-903b-000000000002",
-        "event_data": {
-            "playbook": "/home/dom/testing/new/test.yml",
-            "playbook_uuid": "63bc078d-ac0a-491c-a96e-5382035b0e37",
-            "play": "Test Encrypted Password Transmission",
-            "play_uuid": "152d60d9-8967-a0ee-903b-000000000002",
-            "play_pattern": "localhost",
-            "task": "Print the encrypted password",
-            "task_uuid": "152d60d9-8967-a0ee-903b-000000000005",
-            "task_action": "debug",
-            "resolved_action": "ansible.builtin.debug",
-            "task_args": "",
-            "task_path": "/home/dom/testing/new/test.yml:13",
-            "name": "Print the encrypted password",
-            "is_conditional": false,
-            "uuid": "152d60d9-8967-a0ee-903b-000000000005"
-        }
-    },
-    {
-        "uuid": "fbc32776-5bfa-46d4-959e-693ebd683d41",
-        "counter": 13,
-        "stdout": "",
-        "start_line": 13,
-        "end_line": 13,
-        "runner_ident": "4cef8bdc-6e7a-4721-96e3-1f1e2a0b187f",
-        "event": "runner_on_start",
-        "pid": 422108,
-        "created": "2024-06-13T15:36:37.890541+00:00",
-        "parent_uuid": "152d60d9-8967-a0ee-903b-000000000005",
-        "event_data": {
-            "playbook": "/home/dom/testing/new/test.yml",
-            "playbook_uuid": "63bc078d-ac0a-491c-a96e-5382035b0e37",
-            "play": "Test Encrypted Password Transmission",
-            "play_uuid": "152d60d9-8967-a0ee-903b-000000000002",
-            "play_pattern": "localhost",
-            "task": "Print the encrypted password",
-            "task_uuid": "152d60d9-8967-a0ee-903b-000000000005",
-            "task_action": "debug",
-            "resolved_action": "ansible.builtin.debug",
-            "task_args": "",
-            "task_path": "/home/dom/testing/new/test.yml:13",
-            "host": "localhost",
-            "uuid": "fbc32776-5bfa-46d4-959e-693ebd683d41"
-        }
-    },
-    {
-        "uuid": "b034220e-aeb7-4d88-96d4-bb6624c04c4e",
-        "counter": 14,
-        "stdout": "\u001b[0;32mok: [localhost] => {\u001b[0m\r\n\u001b[0;32m    \"response\": {\u001b[0m\r\n\u001b[0;32m        \"ansible_facts\": {\u001b[0m\r\n\u001b[0;32m            \"discovered_interpreter_python\": \"/home/dom/testing/new/venv/bin/python3.10\"\u001b[0m\r\n\u001b[0;32m        },\u001b[0m\r\n\u001b[0;32m        \"changed\": true,\u001b[0m\r\n\u001b[0;32m        \"cmd\": [\u001b[0m\r\n\u001b[0;32m            \"echo\",\u001b[0m\r\n\u001b[0;32m            \"$6$ieieHYQKmuo0g0Vg$2z3.gNkOX7eQz/zvsHk94XBj5i4eekHw1eamHafQ/t6o2j7ZkWco2espVxpFjsNwZDRJoaQYNBLJuwDKnrOdq0\"\u001b[0m\r\n\u001b[0;32m        ],\u001b[0m\r\n\u001b[0;32m        \"delta\": \"0:00:00.002158\",\u001b[0m\r\n\u001b[0;32m        \"end\": \"2024-06-13 08:36:37.875032\",\u001b[0m\r\n\u001b[0;32m        \"failed\": false,\u001b[0m\r\n\u001b[0;32m        \"msg\": \"\",\u001b[0m\r\n\u001b[0;32m        \"rc\": 0,\u001b[0m\r\n\u001b[0;32m        \"start\": \"2024-06-13 08:36:37.872874\",\u001b[0m\r\n\u001b[0;32m        \"stderr\": \"\",\u001b[0m\r\n\u001b[0;32m        \"stderr_lines\": [],\u001b[0m\r\n\u001b[0;32m        \"stdout\": \"$6$ieieHYQKmuo0g0Vg$2z3.gNkOX7eQz/zvsHk94XBj5i4eekHw1eamHafQ/t6o2j7ZkWco2espVxpFjsNwZDRJoaQYNBLJuwDKnrOdq0\",\u001b[0m\r\n\u001b[0;32m        \"stdout_lines\": [\u001b[0m\r\n\u001b[0;32m            \"$6$ieieHYQKmuo0g0Vg$2z3.gNkOX7eQz/zvsHk94XBj5i4eekHw1eamHafQ/t6o2j7ZkWco2espVxpFjsNwZDRJoaQYNBLJuwDKnrOdq0\"\u001b[0m\r\n\u001b[0;32m        ],\u001b[0m\r\n\u001b[0;32m        \"warnings\": [\u001b[0m\r\n\u001b[0;32m            \"Platform linux on host localhost is using the discovered Python interpreter at /home/dom/testing/new/venv/bin/python3.10, but future installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information.\"\u001b[0m\r\n\u001b[0;32m        ]\u001b[0m\r\n\u001b[0;32m    }\u001b[0m\r\n\u001b[0;32m}\u001b[0m",
-        "start_line": 13,
-        "end_line": 40,
-        "runner_ident": "4cef8bdc-6e7a-4721-96e3-1f1e2a0b187f",
-        "event": "runner_on_ok",
-        "pid": 422108,
-        "created": "2024-06-13T15:36:37.900033+00:00",
-        "parent_uuid": "152d60d9-8967-a0ee-903b-000000000005",
-        "event_data": {
-            "playbook": "/home/dom/testing/new/test.yml",
-            "playbook_uuid": "63bc078d-ac0a-491c-a96e-5382035b0e37",
-            "play": "Test Encrypted Password Transmission",
-            "play_uuid": "152d60d9-8967-a0ee-903b-000000000002",
-            "play_pattern": "localhost",
-            "task": "Print the encrypted password",
-            "task_uuid": "152d60d9-8967-a0ee-903b-000000000005",
-            "task_action": "debug",
-            "resolved_action": "ansible.builtin.debug",
-            "task_args": "",
-            "task_path": "/home/dom/testing/new/test.yml:13",
-            "host": "localhost",
-            "remote_addr": "localhost",
-            "res": {
-                "response": {
-                    "changed": true,
-                    "stdout": "$6$ieieHYQKmuo0g0Vg$2z3.gNkOX7eQz/zvsHk94XBj5i4eekHw1eamHafQ/t6o2j7ZkWco2espVxpFjsNwZDRJoaQYNBLJuwDKnrOdq0",
-                    "stderr": "",
-                    "rc": 0,
-                    "cmd": [
-                        "echo",
-                        "$6$ieieHYQKmuo0g0Vg$2z3.gNkOX7eQz/zvsHk94XBj5i4eekHw1eamHafQ/t6o2j7ZkWco2espVxpFjsNwZDRJoaQYNBLJuwDKnrOdq0"
-                    ],
-                    "start": "2024-06-13 08:36:37.872874",
-                    "end": "2024-06-13 08:36:37.875032",
-                    "delta": "0:00:00.002158",
-                    "msg": "",
-                    "stdout_lines": [
-                        "$6$ieieHYQKmuo0g0Vg$2z3.gNkOX7eQz/zvsHk94XBj5i4eekHw1eamHafQ/t6o2j7ZkWco2espVxpFjsNwZDRJoaQYNBLJuwDKnrOdq0"
-                    ],
-                    "stderr_lines": [],
-                    "ansible_facts": {
-                        "discovered_interpreter_python": "/home/dom/testing/new/venv/bin/python3.10"
-                    },
-                    "warnings": [
-                        "Platform linux on host localhost is using the discovered Python interpreter at /home/dom/testing/new/venv/bin/python3.10, but future installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.17/reference_appendices/interpreter_discovery.html for more information."
-                    ],
-                    "failed": false
-                },
-                "_ansible_verbose_always": true,
-                "_ansible_no_log": false,
-                "changed": false
-            },
-            "start": "2024-06-13T15:36:37.890507+00:00",
-            "end": "2024-06-13T15:36:37.899852+00:00",
-            "duration": 0.009345,
-            "event_loop": null,
-            "uuid": "b034220e-aeb7-4d88-96d4-bb6624c04c4e"
-        }
-    },
-    {
-        "uuid": "73d9fd21-8d49-4361-ac17-140b1917f6b6",
-        "counter": 15,
-        "stdout": "\r\nPLAY RECAP *********************************************************************\r\n\u001b[0;33mlocalhost\u001b[0m                  : \u001b[0;32mok=2   \u001b[0m \u001b[0;33mchanged=1   \u001b[0m unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   ",
-        "start_line": 40,
-        "end_line": 44,
-        "runner_ident": "4cef8bdc-6e7a-4721-96e3-1f1e2a0b187f",
-        "event": "playbook_on_stats",
-        "pid": 422108,
-        "created": "2024-06-13T15:36:37.902870+00:00",
-        "parent_uuid": "63bc078d-ac0a-491c-a96e-5382035b0e37",
-        "event_data": {
-            "playbook": "/home/dom/testing/new/test.yml",
-            "playbook_uuid": "63bc078d-ac0a-491c-a96e-5382035b0e37",
-            "changed": {
-                "localhost": 1
-            },
-            "dark": {},
-            "failures": {},
-            "ignored": {},
-            "ok": {
-                "localhost": 2
-            },
-            "processed": {
-                "localhost": 1
-            },
-            "rescued": {},
-            "skipped": {},
-            "artifact_data": {},
-            "uuid": "73d9fd21-8d49-4361-ac17-140b1917f6b6"
-        }
+        "runner_ident": "8e7d16ce-c9d8-4e73-bec4-d60a8f4ea396",
+        "created": "2024-06-14T16:37:01.546757+00:00"
     }
 ]
