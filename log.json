@@ -1,102 +1,12 @@
 [
-    {
-        "event": "verbose",
-        "uuid": "2da5b921-7767-4a1e-b579-b2c19c144fdb",
-        "counter": 1,
-        "stdout": "\u001b[0;31mERROR! couldn't resolve module/action 'juniper.device.config'. This often indicates a misspelling, missing collection, or incorrect module path.\u001b[0m",
-        "start_line": 0,
-        "end_line": 1,
-        "runner_ident": "8e7d16ce-c9d8-4e73-bec4-d60a8f4ea396",
-        "created": "2024-06-14T16:37:01.544568+00:00"
-    },
-    {
-        "event": "verbose",
-        "uuid": "0f9bcfee-ba41-468b-bba1-8646e16b9402",
-        "counter": 2,
-        "stdout": "\u001b[0;31m\u001b[0m",
-        "start_line": 1,
-        "end_line": 2,
-        "runner_ident": "8e7d16ce-c9d8-4e73-bec4-d60a8f4ea396",
-        "created": "2024-06-14T16:37:01.544938+00:00"
-    },
-    {
-        "event": "verbose",
-        "uuid": "6341b450-68f1-4acd-afdb-937bdbd81015",
-        "counter": 3,
-        "stdout": "\u001b[0;31mThe error appears to be in '/home/dom/testing/new/juniper-root-pwd-upd.yml': line 9, column 7, but may\u001b[0m",
-        "start_line": 2,
-        "end_line": 3,
-        "runner_ident": "8e7d16ce-c9d8-4e73-bec4-d60a8f4ea396",
-        "created": "2024-06-14T16:37:01.545346+00:00"
-    },
-    {
-        "event": "verbose",
-        "uuid": "61e77294-a443-4fd8-89b2-8812bd32e89c",
-        "counter": 4,
-        "stdout": "\u001b[0;31mbe elsewhere in the file depending on the exact syntax problem.\u001b[0m",
-        "start_line": 3,
-        "end_line": 4,
-        "runner_ident": "8e7d16ce-c9d8-4e73-bec4-d60a8f4ea396",
-        "created": "2024-06-14T16:37:01.545583+00:00"
-    },
-    {
-        "event": "verbose",
-        "uuid": "8ccad030-3a32-4e2b-9ee0-065f9d951008",
-        "counter": 5,
-        "stdout": "\u001b[0;31m\u001b[0m",
-        "start_line": 4,
-        "end_line": 5,
-        "runner_ident": "8e7d16ce-c9d8-4e73-bec4-d60a8f4ea396",
-        "created": "2024-06-14T16:37:01.545820+00:00"
-    },
-    {
-        "event": "verbose",
-        "uuid": "c4a6d3e9-6702-4a96-8173-a149a35dcf0b",
-        "counter": 6,
-        "stdout": "\u001b[0;31mThe offending line appears to be:\u001b[0m",
-        "start_line": 5,
-        "end_line": 6,
-        "runner_ident": "8e7d16ce-c9d8-4e73-bec4-d60a8f4ea396",
-        "created": "2024-06-14T16:37:01.546057+00:00"
-    },
-    {
-        "event": "verbose",
-        "uuid": "84132403-0656-45e3-9e89-38fbd1cade10",
-        "counter": 7,
-        "stdout": "\u001b[0;31m\u001b[0m",
-        "start_line": 6,
-        "end_line": 7,
-        "runner_ident": "8e7d16ce-c9d8-4e73-bec4-d60a8f4ea396",
-        "created": "2024-06-14T16:37:01.546235+00:00"
-    },
-    {
-        "event": "verbose",
-        "uuid": "4a089192-18b3-4f19-a2e8-531096144b31",
-        "counter": 8,
-        "stdout": "\u001b[0;31m  tasks:\u001b[0m",
-        "start_line": 7,
-        "end_line": 8,
-        "runner_ident": "8e7d16ce-c9d8-4e73-bec4-d60a8f4ea396",
-        "created": "2024-06-14T16:37:01.546342+00:00"
-    },
-    {
-        "event": "verbose",
-        "uuid": "370b970a-7e86-4307-8783-4e0345a5f834",
-        "counter": 9,
-        "stdout": "\u001b[0;31m    - name: \"Change root password\"\u001b[0m",
-        "start_line": 8,
-        "end_line": 9,
-        "runner_ident": "8e7d16ce-c9d8-4e73-bec4-d60a8f4ea396",
-        "created": "2024-06-14T16:37:01.546600+00:00"
-    },
-    {
-        "event": "verbose",
-        "uuid": "d1a2e3d8-dd0d-402c-8cf3-86979e1de95c",
-        "counter": 10,
-        "stdout": "\u001b[0;31m      ^ here\u001b[0m",
-        "start_line": 9,
-        "end_line": 10,
-        "runner_ident": "8e7d16ce-c9d8-4e73-bec4-d60a8f4ea396",
-        "created": "2024-06-14T16:37:01.546757+00:00"
-    }
+    "ERROR! couldn't resolve module/action 'juniper.device.config'. This often indicates a misspelling, missing collection, or incorrect module path.\u001b[0m",
+    "\u001b[0m",
+    "The error appears to be in '/home/dom/testing/new/juniper-root-pwd-upd.yml': line 9, column 7, but may\u001b[0m",
+    "be elsewhere in the file depending on the exact syntax problem.\u001b[0m",
+    "\u001b[0m",
+    "The offending line appears to be:\u001b[0m",
+    "\u001b[0m",
+    "  tasks:\u001b[0m",
+    "    - name: \"Change root password\"\u001b[0m",
+    "      ^ here\u001b[0m"
 ]
